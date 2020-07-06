@@ -50,7 +50,7 @@ ctaImage.src = "img/header-img.png"
 let midImage = document.querySelector('#middle-img');
 midImage.src = "img/mid-page-accent.jpg"
 
-let navItems = document.querySelectorAll('a');
+let navItems = document.querySelectorAll('header nav a');
 console.log(navItems);
 
 navItems[0].textContent = siteContent.nav['nav-item-1'];
@@ -66,4 +66,47 @@ ctaTextOne.textContent = siteContent.cta['h1'];
 let ctaTextTwo = document.querySelector('.cta-text button');
 ctaTextTwo.textContent =siteContent.cta['button'];
 
-let mainOne = document.querySelector('')
+let mainHead = document.querySelectorAll('.text-content h4');
+mainHead[0].textContent = siteContent["main-content"]["features-h4"];
+mainHead[1].textContent = siteContent["main-content"]["about-h4"];
+mainHead[2].textContent = siteContent["main-content"]["services-h4"];
+mainHead[3].textContent = siteContent["main-content"]["product-h4"];
+mainHead[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let mainText = document.querySelectorAll('.text-content p');
+mainText[0].textContent = siteContent["main-content"]["features-content"];
+mainText[1].textContent = siteContent["main-content"]["about-content"];
+mainText[2].textContent = siteContent["main-content"]["services-content"];
+mainText[3].textContent = siteContent["main-content"]["product-content"];
+mainText[4].textContent = siteContent["main-content"]["vision-content"];
+
+let contHead = document.querySelector('.contact h4');
+contHead.textContent = siteContent.contact["contact-h4"];
+
+let contBody = document.querySelectorAll('.contact p');
+contBody[0].textContent = siteContent.contact['address'];
+contBody[1].textContent = siteContent.contact['phone'];
+contBody[2].textContent = siteContent.contact['email'];
+
+let footText = document.querySelector('footer p');
+footText.textContent = siteContent.footer['copyright'];
+
+// Add new content section from README.md ---
+
+navItems.forEach(item => {
+  item.style.color = "green";
+});
+
+let justNav = document.querySelector('nav');
+
+let newNavOne = document.createElement('a');
+let newNavTwo = document.createElement('a');
+
+newNavOne.textContent = "One";
+newNavTwo.textContent = "Two";
+
+newNavOne.href ="#";
+newNavTwo.href ="#";
+
+justNav.appendChild(newNavOne);
+justNav.appendChild(newNavTwo);
